@@ -1,69 +1,67 @@
 # Personal-Finance-Tracker
-🔹 Project Overview
 
-This system helps users manage their personal finances by:
+Project Overview
 
-Recording income & expenses as transactions.
+The system assists users in handling their personal  financial data through the following features:
 
-Tracking savings goals.
+The system tracks user income together with their expense transactions.
 
-Allowing search, filter, and sort on transactions.
+The system  enables users to track their savings objectives.
 
-Storing data persistently using file handling.
+The system enables users to find transactions through search functions and process them  with filter functions and sorting options.
 
-Displaying an ASCII bar chart for monthly spending (bonus feature).
+The system keeps data stored permanently through file-handling techniques.
 
-🔹 Features in Detail
+The  system shows monthly spending through an ASCII bar chart as an additional feature.
+
+ Features in Detail
+
 1. Transaction Management
 
-Each transaction stored in a structure:
+Every recorded transaction exists inside a structure named:
 
 struct Transaction {
+
     int id;
     char type[10];   // "Income" or "Expense"
     char category[30]; 
     float amount;
     char date[15];   // e.g. "2025-08-19"
+
 };
 
+The transactions exist as an array of structures.
 
-Stored in an array of structures.
+2. Sorting, Searching,  Filtering
 
-2. Sorting, Searching, Filtering
+Users can arrange transactions according to date sequence and amount size and category grouping.
 
-Sort transactions by date, amount, or category.
+Users can  search through the transactions by selecting categories such as "Food".
 
-Search by category (e.g., "Food").
-
-Filter (e.g., expenses > $100).
+Users can filter their expenses by selecting  criteria such as amounts exceeding $100.
 
 3. Savings Goal Tracking
 
-User sets a monthly savings goal.
+Users establish their monthly savings objectives  through the system.
 
-Program compares income - expenses with the goal.
+The program evaluates the difference between income and expenses in relation to the savings goal.
 
-Displays progress (met/not met).
+The system shows users whether they have reached their savings goal or not.
 
 4. File Handling
 
-Save transactions to a file (finance.txt).
+Users  can save their financial transactions in the file named finance.txt.
 
-Load transactions when the program starts.
+The system retrieves financial transactions from storage during  program initialization.
 
 5. ASCII Bar Chart (Bonus)
 
-For each month, print total spending in bar form. Example:
+The system displays monthly spending totals with bar charts  which represent the amount spent. Example:
 
 Jan: ####### ($700)
-Feb: ### ($300)
+
+Feb:  ### ($300)
+
 Mar: ########## ($1000)
 
-
-(# = $100)
-
-🔹 How to Run
-
-Compile the program:
-
-g++ finance_tracker.cpp -o finance_tracker
+(#
